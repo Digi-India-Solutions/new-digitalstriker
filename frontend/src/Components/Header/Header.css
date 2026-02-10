@@ -1,0 +1,434 @@
+/* ================= GLOBAL RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+}
+
+/* ================= HEADER / NAVBAR ================= */
+.header {
+  background: #FFF8DE;
+  box-shadow: 0 6px 25px rgba(12, 44, 85, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+/* ================= CONTAINER ================= */
+.header .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 30px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ================= LOGO ================= */
+.header .logo {
+  display: inline-block;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.header .logo img {
+  height: 150px;
+  width: auto;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.header .logo:hover img {
+  transform: scale(1.05);
+}
+
+/* ================= NAVIGATION - DESKTOP ================= */
+.header nav {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header .main-ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+}
+
+.header .main-ul > li {
+  position: relative;
+}
+
+/* ================= NAV LINKS - DESKTOP ================= */
+.header .main-ul > li > .for-white {
+  color: #0C2C55;
+  font-size: 17px;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.header .main-ul > li > .for-white:hover {
+  background: #0C2C55;
+  color: #FFF8DE;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(12, 44, 85, 0.3);
+}
+
+/* ================= DROPDOWN MENUS - DESKTOP ================= */
+.header .about-hover,
+.header .services-hover,
+.header .career-hover,
+.header .client-hover {
+  position: absolute;
+  top: calc(100% + 15px);
+  left: 0;
+  min-width: 260px;
+  background: #FFF8DE;
+  border-radius: 14px;
+  box-shadow: 0 10px 35px rgba(12, 44, 85, 0.25);
+  padding: 12px 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-15px);
+  transition: all 0.3s ease;
+  z-index: 100;
+  list-style: none;
+}
+
+.header .active-about-hover,
+.header .active-service-hover,
+.header .active-career-hover,
+.header .active-client-hover {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.header .about-hover a,
+.header .services-hover a,
+.header .career-hover a,
+.header .client-hover a {
+  display: block;
+  padding: 14px 24px;
+  color: #0C2C55;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-left: 3px solid transparent;
+}
+
+.header .about-hover a:hover,
+.header .services-hover a:hover,
+.header .career-hover a:hover,
+.header .client-hover a:hover {
+  background: #0C2C55;
+  color: #FFF8DE;
+  border-left-color: #0C2C55;
+  padding-left: 28px;
+}
+
+/* ================= MOBILE MENU BUTTON ================= */
+.header .menu-bar {
+  display: none;
+  cursor: pointer;
+  padding: 8px;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.header .menu-bar i {
+  font-size: 32px;
+  color: #0C2C55;
+  transition: all 0.3s ease;
+}
+
+.header .menu-bar:hover i {
+  color: #0a2345;
+  transform: scale(1.1);
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+@media (max-width: 991px) {
+
+  /* Container */
+  .header .container {
+    height: 85px;
+    padding: 0 20px;
+  }
+
+  /* Logo */
+  .header .logo img {
+    height: 125px;
+  }
+
+  /* Show hamburger */
+  .header .menu-bar {
+    display: block;
+  }
+
+  /* Navigation */
+  .header nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    padding: 0;
+  }
+
+  /* Mobile menu */
+  .header .main-ul {
+    flex-direction: column;
+    background: #0C2C55;
+    padding: 0;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+    max-height: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    opacity: 0;
+    transition: all 0.5s ease;
+    gap: 0;
+  }
+
+  /* Show menu */
+  .header .main-ul.mainmenudropdown {
+    max-height: 80vh;
+    opacity: 1;
+    padding: 25px 20px 20px 20px;
+  }
+
+  /* Menu items */
+  .header .main-ul > li {
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  /* Nav links mobile */
+  .header .main-ul > li > .for-white {
+    color: #FFF8DE;
+    text-align: left;
+    padding: 16px 20px;
+    font-size: 16px;
+    border-radius: 12px;
+    margin-bottom: 8px;
+    position: relative;
+    background: rgba(255, 248, 222, 0.05);
+  }
+
+  .header .main-ul > li > .for-white:hover {
+    background: rgba(255, 248, 222, 0.15);
+    transform: none;
+    box-shadow: none;
+  }
+
+  /* Arrow indicators */
+  .header .about-pointer > .for-white::after,
+  .header .services-pointer > .for-white::after,
+  .header .career-pointer > .for-white::after,
+  .header .client-pointer > .for-white::after {
+    content: '▼';
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    transition: transform 0.3s ease;
+    color: #FFF8DE;
+  }
+
+  /* Rotate arrow when open */
+  .header .about-hover.active-about-hover ~ .for-white::after {
+    transform: translateY(-50%) rotate(180deg);
+  }
+
+  /* MOBILE DROPDOWN */
+  .header .about-hover,
+  .header .services-hover,
+  .header .career-hover,
+  .header .client-hover {
+    position: static;
+    background: #FFF8DE;
+    border-radius: 12px;
+    margin: 0 0 12px 0;
+    padding: 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+    transform: none;
+  }
+
+  /* Show dropdown */
+  .header .active-about-hover,
+  .header .active-service-hover,
+  .header .active-career-hover,
+  .header .active-client-hover {
+    max-height: 800px;
+    opacity: 1;
+    visibility: visible;
+    padding: 10px 0;
+    margin-bottom: 12px;
+  }
+
+  /* Dropdown links */
+  .header .about-hover a,
+  .header .services-hover a,
+  .header .career-hover a,
+  .header .client-hover a {
+    padding: 14px 22px;
+    font-size: 15px;
+    color: #0C2C55;
+    border-left: none;
+    display: block;
+    transition: all 0.3s ease;
+  }
+
+  .header .about-hover a:hover,
+  .header .services-hover a:hover,
+  .header .career-hover a:hover,
+  .header .client-hover a:hover {
+    background: #0C2C55;
+    color: #FFF8DE;
+    padding-left: 22px;
+  }
+
+  /* Custom scrollbar */
+  .header .main-ul::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .header .main-ul::-webkit-scrollbar-track {
+    background: rgba(255, 248, 222, 0.1);
+    border-radius: 10px;
+  }
+
+  .header .main-ul::-webkit-scrollbar-thumb {
+    background: rgba(255, 248, 222, 0.3);
+    border-radius: 10px;
+  }
+
+  .header .main-ul::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 248, 222, 0.5);
+  }
+}
+
+/* ================= TABLET ================= */
+@media (max-width: 768px) {
+  .header .container {
+    height: 75px;
+    padding: 0 18px;
+  }
+
+  .header .logo img {
+    height: 105px;
+  }
+
+  .header .menu-bar i {
+    font-size: 28px;
+  }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 576px) {
+  .header .container {
+    height: 70px;
+    padding: 0 15px;
+  }
+
+  .header .logo img {
+    height: 90px;
+  }
+
+  .header .main-ul > li > .for-white {
+    font-size: 15px;
+    padding: 14px 18px;
+  }
+
+  .header .about-hover a,
+  .header .services-hover a,
+  .header .career-hover a,
+  .header .client-hover a {
+    font-size: 14px;
+    padding: 12px 18px;
+  }
+}
+
+/* ================= SMALL MOBILE ================= */
+@media (max-width: 400px) {
+  .header .container {
+    height: 65px;
+  }
+
+  .header .logo img {
+    height: 75px;
+  }
+
+  .header .menu-bar i {
+    font-size: 26px;
+  }
+
+  .header .main-ul > li > .for-white {
+    font-size: 14px;
+    padding: 12px 16px;
+  }
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header .main-ul.mainmenudropdown {
+  animation: slideDown 0.4s ease;
+}
+
+/* ================= ACCESSIBILITY ================= */
+.header .for-white:focus {
+  outline: 2px solid #0C2C55;
+  outline-offset: 3px;
+}
+
+.header .menu-bar:focus {
+  outline: 2px solid #0C2C55;
+  outline-offset: 3px;
+}
+
+/* Prevent text selection */
+.header .about-pointer > .for-white,
+.header .services-pointer > .for-white,
+.header .career-pointer > .for-white,
+.header .client-pointer > .for-white {
+  user-select: none;
+  -webkit-user-select: none;
+}

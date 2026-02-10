@@ -1,0 +1,327 @@
+/* --- Root Variables (Deep Blue & Cream Theme) --- */
+:root {
+  --primary-blue: #0C2C55;     /* Deep Corporate Blue */
+  --secondary-blue: #1a3d6b;   /* Professional Accent Blue */
+  --cream-accent: #FFF8DE;     /* Soft Premium Cream */
+  --white: #ffffff;
+  --black: #000000;            /* Requested Black Color */
+  --text-muted: #555555;
+  --card-shadow: 0 20px 40px rgba(12, 44, 85, 0.1);
+  --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.missionpage-section {
+  padding: 80px 0;
+  background-color: var(--white);
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 0 25px;
+}
+
+/* --- 1. Hero Section --- */
+.mission-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.hero-content .heading {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.heading-icon {
+  color: var(--primary-blue);
+}
+
+.hero-content h1 {
+  font-size: clamp(2.5rem, 6vw, 4.2rem);
+  font-weight: 900;
+  color: var(--primary-blue);
+  line-height: 1.1;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.hero-subtitle {
+  font-size: 1.35rem;
+  color: var(--black); /* Set to Black as requested */
+  border-left: 6px solid var(--primary-blue);
+  padding-left: 25px;
+  line-height: 1.7;
+  margin-top: 30px;
+  font-weight: 500;
+}
+
+.hero-image {
+  position: relative;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 40px;
+  box-shadow: var(--card-shadow);
+}
+
+.hero-badge {
+  position: absolute;
+  bottom: -25px;
+  left: -25px;
+  background: var(--primary-blue);
+  color: var(--cream-accent);
+  padding: 25px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-weight: 800;
+  box-shadow: 0 15px 35px rgba(12, 44, 85, 0.3);
+}
+
+/* --- 2. Intro Grid Cards --- */
+.mission-intro-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 100px;
+}
+
+.intro-card {
+  background: var(--white);
+  padding: 50px 30px;
+  border-radius: 35px;
+  box-shadow: var(--card-shadow);
+  transition: var(--transition);
+  text-align: center;
+  border: 1px solid rgba(12, 44, 85, 0.05);
+}
+
+.intro-card:hover {
+  transform: translateY(-12px);
+  background: #fcfdfe;
+}
+
+.intro-card.featured {
+  background: var(--primary-blue);
+  color: var(--white);
+}
+
+.intro-card.featured .card-icon {
+  color: var(--cream-accent);
+}
+
+.card-icon {
+  margin-bottom: 25px;
+  color: var(--primary-blue);
+  display: flex;
+  justify-content: center;
+}
+
+.intro-card h3 {
+  font-size: 1.7rem;
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+
+/* --- 3. Core Values Section --- */
+.core-values-section {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 60px;
+  align-items: center;
+  background: var(--cream-accent);
+  padding: 70px;
+  border-radius: 45px;
+  margin-bottom: 100px;
+}
+
+.values-image img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 25px;
+  box-shadow: 15px 15px 0 var(--primary-blue);
+}
+
+.values-overlay {
+  display: none; /* Desktop par hide, ya aap icon dikha sakte hain */
+}
+
+.values-content h2 {
+  font-size: 3rem;
+  color: var(--primary-blue);
+  margin-bottom: 25px;
+  font-weight: 900;
+}
+
+.values-description {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: var(--primary-blue);
+  font-weight: 600;
+  border-left: 5px solid var(--primary-blue);
+  padding-left: 30px;
+}
+
+/* --- 4. Mission Gallery --- */
+.mission-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-bottom: 100px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 30px;
+  height: 350px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(transparent, var(--primary-blue));
+  display: flex;
+  align-items: flex-end;
+  padding: 30px;
+  color: var(--white);
+  font-weight: 700;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.gallery-item:hover .gallery-overlay { opacity: 1; }
+.gallery-item:hover img { transform: scale(1.1); }
+
+/* --- 5. Commitments Grid --- */
+.commitment-header {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.commitment-header h2 {
+  font-size: 3rem;
+  color: var(--primary-blue);
+  font-weight: 900;
+  margin-top: 15px;
+}
+
+.commitments-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-bottom: 100px;
+}
+
+.commitment-item {
+  display: flex;
+  gap: 20px;
+  padding: 30px;
+  background: #fdfdfd;
+  border-radius: 25px;
+  border: 1px solid #eee;
+  transition: 0.3s;
+}
+
+.commitment-item:hover {
+  background: var(--primary-blue);
+  color: var(--white);
+  transform: translateY(-5px);
+}
+
+.commitment-icon { color: var(--primary-blue); }
+.commitment-item:hover .commitment-icon { color: var(--cream-accent); }
+
+.commitment-content h4 { font-weight: 800; margin-bottom: 10px; font-size: 1.25rem; }
+
+/* --- 6. Success Stats & CTA --- */
+.success-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.stats-image img { width: 100%; border-radius: 35px; }
+
+.mission-cta {
+  text-align: center;
+  padding: 80px 40px;
+  background: var(--primary-blue);
+  color: var(--cream-accent);
+  border-radius: 50px;
+}
+
+.mission-cta h3 { font-size: 2.8rem; font-weight: 900; margin-bottom: 15px; }
+
+/* ==========================================================================
+   A TO Z RESPONSIVE CENTERED DESIGN (Mobile & Tablet)
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .mission-hero, .core-values-section, .success-stats {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .hero-content h1 { font-size: 3.5rem; }
+  .commitments-grid, .mission-intro-grid { grid-template-columns: repeat(2, 1fr); }
+  
+  .hero-subtitle {
+    border-left: none;
+    border-top: 6px solid var(--primary-blue);
+    padding: 30px 10px 0;
+    max-width: 700px;
+    margin: 30px auto 0;
+    
+  }
+}
+
+@media (max-width: 768px) {
+  .commitments-grid, .mission-intro-grid, .mission-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content h1 { font-size: 2.8rem; }
+  
+  .hero-image img { height: 350px; }
+
+  .hero-badge {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    margin: 20px auto 0;
+    width: fit-content;
+  }
+
+  .core-values-section { padding: 40px 20px; }
+  .values-content h2 { font-size: 2.2rem; }
+  .values-description { font-size: 1.2rem; padding-left: 20px; }
+
+  .mission-cta h3 { font-size: 2rem; }
+}
+
+@media (max-width: 480px) {
+  .heading { flex-direction: column; text-align: center; }
+  .commitment-item { flex-direction: column; text-align: center; align-items: center; }
+  .hero-content h1 { font-size: 2.2rem; }
+}

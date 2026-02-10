@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  /* SECTION */
+  .fiber-section {
+    background: #f8fafc;
+    padding: 70px 20px;
+  }
+  
+  /* CONTAINER */
+  .container {
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  /* TITLE */
+  .page-title {
+    text-align: center;
+    font-size: 34px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 40px;
+  }
+  
+  /* STATUS TEXT */
+  .status-text {
+    text-align: center;
+    color: #64748b;
+    font-size: 16px;
+  }
+  
+  /* GRID */
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+  }
+  
+  /* CARD */
+  .product-card {
+    background: #fff;
+    border-radius: 18px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.35s ease;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* IMAGE */
+  .image-box {
+    width: 100%;
+    height: 220px;
+    background: #e5e7eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* INFO */
+  .product-info {
+    padding: 18px;
+    text-align: center;
+  }
+  
+  .product-info p {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1e293b;
+  }
+  
+  /* MOBILE */
+  @media (max-width: 600px) {
+    .page-title {
+      font-size: 26px;
+    }
+  
+    .image-box {
+      height: 180px;
+    }
+  }
+  

@@ -1,0 +1,152 @@
+/* Isolation Wrapper */
+.ds-contact-wrapper {
+    --ds-primary: #0C2C55;
+    --ds-accent: #1a3d6b;
+    --ds-cream: #FFF8DE;
+    --ds-text: #333;
+    --ds-light-text: #666;
+    
+    padding: 80px 0;
+    background-color: #fcfcfc;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.ds-contact-wrapper .ds-contact-container {
+    width: 90%;
+    max-width: 1150px;
+    background: #fff;
+    border-radius: 30px;
+    box-shadow: 0 20px 60px rgba(12, 44, 85, 0.1);
+    overflow: hidden;
+}
+
+.ds-contact-wrapper .ds-contact-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Panel Styling */
+.ds-contact-wrapper .ds-contact-info-panel {
+    flex: 1;
+    min-width: 320px;
+    background: var(--ds-primary);
+    padding: 60px 40px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ds-contact-wrapper .ds-contact-form-panel {
+    flex: 1.5;
+    min-width: 350px;
+    padding: 60px;
+}
+
+/* Info Items */
+.ds-contact-wrapper .ds-info-item {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+    align-items: flex-start;
+}
+
+.ds-contact-wrapper .ds-icon-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 15px;
+    color: var(--ds-cream);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ds-contact-wrapper .ds-info-text h4 {
+    margin: 0 0 8px 0;
+    font-size: 1.2rem;
+    color: var(--ds-cream);
+}
+
+.ds-contact-wrapper .ds-info-text p {
+    margin: 0;
+    font-size: 0.95rem;
+    opacity: 0.8;
+    line-height: 1.5;
+}
+
+/* Form Styling */
+.ds-contact-wrapper .ds-form-header h3 {
+    font-size: 2.2rem;
+    color: var(--ds-primary);
+    margin: 0 0 10px 0;
+}
+
+.ds-contact-wrapper .ds-form-header p {
+    color: var(--ds-light-text);
+    margin-bottom: 40px;
+}
+
+.ds-contact-wrapper .ds-input-group {
+    margin-bottom: 20px;
+}
+
+.ds-contact-wrapper .ds-input-group input,
+.ds-contact-wrapper .ds-input-group textarea {
+    width: 100%;
+    padding: 15px 20px;
+    border: 2px solid #eee;
+    border-radius: 12px;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s;
+    background: #fdfdfd;
+}
+
+.ds-contact-wrapper .ds-input-group input:focus,
+.ds-contact-wrapper .ds-input-group textarea:focus {
+    border-color: var(--ds-primary);
+    box-shadow: 0 0 15px rgba(12, 44, 85, 0.05);
+}
+
+.ds-contact-wrapper .ds-input-group textarea {
+    height: 150px;
+    resize: none;
+}
+
+/* Button */
+.ds-contact-wrapper .ds-submit-btn {
+    background: var(--ds-primary);
+    color: #fff;
+    padding: 16px 40px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: 0.3s;
+    width: 100%;
+}
+
+.ds-contact-wrapper .ds-submit-btn:hover {
+    background: var(--ds-accent);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(12, 44, 85, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .ds-contact-wrapper .ds-contact-info-panel,
+    .ds-contact-wrapper .ds-contact-form-panel {
+        padding: 40px 25px;
+    }
+    
+    .ds-contact-wrapper .ds-form-header h3 {
+        font-size: 1.8rem;
+    }
+}

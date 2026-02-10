@@ -1,0 +1,203 @@
+/* --- Contact Page Style --- */
+:root {
+    --ds-primary: #0C2C55;      /* Deep Navy Blue */
+    --ds-accent: #1a3d6b;       /* Accent Blue */
+    --ds-cream: #FFF8DE;        /* Brand Cream */
+    --ds-white: #ffffff;
+    --ds-bg: #f8fafc;
+    --ds-transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  
+  .ds-contact-page {
+    background-color: var(--ds-bg);
+    padding-bottom: 100px;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .ds-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* --- Hero Section --- */
+  .ds-contact-hero {
+    background-color: var(--ds-primary);
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--ds-white);
+    padding-bottom: 100px;
+  }
+  
+  .ds-contact-hero h1 {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 900;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .ds-contact-hero p {
+    font-size: 1.1rem;
+    opacity: 0.8;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  /* --- Main Card Layout --- */
+  .ds-contact-card {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    background: var(--ds-white);
+    margin-top: -120px;
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: 0 40px 100px rgba(12, 44, 85, 0.12);
+  }
+  
+  /* --- Sidebar --- */
+  .ds-contact-sidebar {
+    background: var(--ds-primary);
+    padding: 50px 40px;
+    color: var(--ds-white);
+    display: flex;
+    align-items: center;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .ds-sidebar-content h2 {
+    font-size: 1.8rem;
+    color: var(--ds-cream);
+    margin-bottom: 20px;
+  }
+  
+  .ds-feature-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+  }
+  
+  .ds-icon-circle {
+    background: rgba(255, 248, 222, 0.1);
+    color: var(--ds-cream);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* --- Form Area --- */
+  .ds-contact-form-area {
+    padding: 60px;
+  }
+  
+  .ds-form-header {
+    margin-bottom: 40px;
+  }
+  
+  .ds-form-header h2 {
+    font-size: 2.2rem;
+    color: var(--ds-primary);
+    margin-bottom: 8px;
+  }
+  
+  .ds-underline {
+    width: 60px;
+    height: 4px;
+    background: var(--ds-primary);
+    border-radius: 10px;
+  }
+  
+  /* --- Inputs --- */
+  .ds-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .ds-input-wrapper {
+    position: relative;
+    width: 100%;
+  }
+  
+  .ds-input-icon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #a0aec0;
+    transition: var(--ds-transition);
+  }
+  
+  .ds-textarea-wrapper .ds-input-icon {
+    top: 25px;
+  }
+  
+  .ds-input-wrapper input,
+  .ds-input-wrapper textarea {
+    width: 100%;
+    padding: 16px 20px 16px 55px;
+    background: #fcfcfc;
+    border: 1.5px solid #edf2f7;
+    border-radius: 15px;
+    font-size: 1rem;
+    outline: none;
+    transition: var(--ds-transition);
+  }
+  
+  .ds-input-wrapper textarea {
+    height: 150px;
+    resize: none;
+  }
+  
+  .ds-input-wrapper input:focus,
+  .ds-input-wrapper textarea:focus {
+    border-color: var(--ds-primary);
+    background: var(--ds-white);
+    box-shadow: 0 10px 20px rgba(12, 44, 85, 0.05);
+  }
+  
+  .ds-input-wrapper input:focus + .ds-input-icon,
+  .ds-input-wrapper textarea:focus + .ds-input-icon {
+    color: var(--ds-primary);
+  }
+  
+  /* --- Submit Button --- */
+  .ds-submit-btn {
+    background: var(--ds-primary);
+    color: var(--ds-white);
+    padding: 18px;
+    border: none;
+    border-radius: 15px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    transition: var(--ds-transition);
+    margin-top: 10px;
+  }
+  
+  .ds-submit-btn:hover {
+    background: var(--ds-accent);
+    transform: translateY(-4px);
+    box-shadow: 0 15px 30px rgba(12, 44, 85, 0.25);
+  }
+  
+  /* --- Responsive --- */
+  @media (max-width: 992px) {
+    .ds-contact-card { grid-template-columns: 1fr; }
+    .ds-contact-sidebar { display: none; }
+    .ds-contact-form-area { padding: 40px 25px; }
+    .ds-contact-hero { height: 350px; }
+  }

@@ -1,0 +1,190 @@
+/* --- Footer Styling --- */
+.ds-footer {
+    background-color: #0C2C55; /* Deep Navy Blue */
+    color: #ffffff;
+    padding-top: 60px;
+    font-family: 'Inter', sans-serif;
+}
+
+.ds-footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.ds-footer-col {
+    flex: 1;
+    min-width: 250px;
+}
+
+/* --- Title Styling --- */
+.ds-footer-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 10px;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.ds-footer-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 3px;
+    background-color: #ECC91F; /* Golden/Cream Accent */
+}
+
+/* --- Links Styling --- */
+.ds-footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.ds-footer-links li {
+    margin-bottom: 12px;
+}
+
+.ds-footer-links a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.ds-footer-links a:hover {
+    color: #ECC91F;
+    transform: translateX(5px);
+}
+
+/* --- Contact Info Styling --- */
+.ds-contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.ds-contact-item {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.ds-icon {
+    color: #ECC91F;
+    flex-shrink: 0;
+}
+
+.ds-contact-item p, 
+.ds-emails a {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+    text-decoration: none;
+}
+
+.ds-emails {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.ds-emails a:hover {
+    color: #ECC91F;
+}
+
+/* --- Social Icons --- */
+.ds-social-icons {
+    display: flex;
+    gap: 12px;
+}
+
+.ds-social-btn {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.ds-social-btn:hover {
+    background-color: #ECC91F;
+    color: #0C2C55;
+    transform: translateY(-5px);
+}
+
+/* --- Bottom Footer --- */
+.ds-footer-bottom {
+    margin-top: 50px;
+    padding: 20px 0;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.ds-bottom-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.ds-bottom-container p {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.ds-bottom-container a {
+    color: #ECC91F;
+    text-decoration: none;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .ds-footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .ds-footer-title::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .ds-footer-links a {
+        justify-content: center;
+    }
+
+    .ds-contact-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .ds-social-icons {
+        justify-content: center;
+    }
+
+    .ds-bottom-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}

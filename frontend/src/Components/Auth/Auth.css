@@ -1,0 +1,370 @@
+.auth-section {
+    width: 100%;
+}
+
+.auth-section .container {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 40px 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.auth-section .container .heading {
+    width: 100%;
+    text-align: center;
+}
+
+.auth-section .container .heading span {
+    font-size: 33px;
+    font-weight: 700;
+}
+
+.auth-section .container .down {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    background-color: azure;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+.auth-section .container .down .main-container {
+    width: 100%;
+}
+
+.auth-section .container .down .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.auth-section .container .down .buttons button {
+    padding: 6px 15px;
+    background-color: #38418E;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+.auth-section .container .down .main-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.auth-section .container .down .main-container form .up-field {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+}
+
+.auth-section .container .down .main-container form .up-field .same-field label {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.auth-section .container .down .main-container form .up-field .same-field {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.auth-section .container .down .main-container form .up-field .same-field input {
+    height: 40px;
+    width: 100%;
+    padding-left: 10px;
+    border: none;
+    outline: none;
+    border: 1px solid rgb(137, 137, 137);
+    border-radius: 10px;
+}
+
+.auth-section .container .down .main-container form .mid-field {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.auth-section .container .down .main-container form .mid-field .category {
+    width: 100%;
+    height: 40px;
+}
+
+.auth-section .container .down .main-container form .mid-field .category option {
+    width: 100%;
+}
+
+.auth-section .container .down .main-container form .mid-field label {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.auth-section .container .down .main-container form .down-field {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.auth-section .container .down .main-container form .down-field label {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.auth-section .container .down .main-container form .down-field textarea {
+    height: 110px;
+    width: 100%;
+    padding-left: 10px;
+    border: none;
+    outline: none;
+    border: 1px solid rgb(137, 137, 137);
+    border-radius: 10px;
+}
+
+.image-upload input::file-selector-button {
+    font-weight: bold;
+    color: black;
+    border: none;
+    border-radius: 3px;
+    height: 100%;
+}
+
+.auth-section .container .down .main-container form .btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.auth-section .container .down .main-container form .btns button {
+    padding: 7px 14px;
+    cursor: pointer;
+}
+
+.auth-section .container .down .main-container form .btns button:nth-child(1) {
+    background-color: rgb(255, 43, 43);
+    border: none;
+    color: white;
+}
+
+.auth-section .container .down .main-container form .btns button:nth-child(2) {
+    background-color: rgb(43, 255, 47);
+    border: none;
+    color: white;
+}
+
+@media (max-width:600px) {
+
+    .auth-section .container .down .main-container form .up-field {
+        flex-direction: column;
+
+    }
+
+    .auth-section .container .down .main-container form .up-field .same-field {
+        width: 100%;
+    }
+
+}
+
+@media (max-width:600px) {
+
+    .auth-section .container {
+        padding: 40px 0px;
+    }
+
+
+}
+
+
+
+
+.auth-section .container .down .main-container .main-product-box {
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    width: 100%;
+}
+
+/* One product = card + delete row below; 4 per row, fills full width */
+.auth-section .container .down .main-container .main-product-box .auth-product-item {
+    flex: 1 1 calc((100% - 60px) / 4);
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+}
+
+/* Card only – rounded box, shadow; hover stays on this box only */
+.auth-section .container .down .main-container .main-product-box .auth-product-item .auth-product-card {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+.auth-section .container .down .main-container .main-product-box .auth-product-item .auth-product-card::before,
+.auth-section .container .down .main-container .main-product-box .auth-product-item .auth-product-card::after {
+    display: none !important;
+}
+
+.auth-section .container .down .main-container .main-product-box .auth-product-item .auth-product-card .des-box {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    padding: 15px 12px;
+    min-height: 52px;
+}
+
+.auth-section .container .down .main-container .main-product-box .auth-product-item .auth-product-card .img {
+    width: 100%;
+    height: 240px;
+    flex-shrink: 0;
+}
+
+.auth-section .container .down .main-container .main-product-box .auth-product-item .auth-product-card .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.auth-section .container .down .main-container .main-product-box .auth-product-item .auth-product-card .detail {
+    padding: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.auth-section .container .down .main-container .main-product-box .auth-product-item .auth-product-card .detail h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0;
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-clamp: 2;
+    line-height: 1.3;
+}
+
+.auth-section .container .down .main-container .main-product-box .auth-product-item .auth-product-card .detail p {
+    font-size: 13px;
+    color: #444;
+    margin: 0;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+.auth-section .container .down .main-container .main-product-box .auth-product-item .auth-product-card .des {
+    padding: 0px 10px;
+}
+
+.auth-section .container .down .main-container .main-product-box .auth-product-item .auth-product-card .des p {
+    font-size: 16px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 90%;
+}
+
+/* Delete row – separate from card (gap above), not part of card hover */
+.auth-section .container .down .main-container .main-product-box .auth-product-item .auth-product-delete-row {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+}
+
+.auth-section .container .down .main-container .main-product-box .auth-product-item .auth-product-delete-row .auth-delete-btn {
+    background-color: rgb(254, 89, 89);
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 6px;
+    min-height: 44px;
+    min-width: 120px;
+}
+.auth-section .container .down .main-container .main-product-box .auth-product-item .auth-product-delete-row .auth-delete-btn:hover {
+    background-color: rgb(230, 70, 70);
+}
+
+.auth-section .container .down .main-container .table-container {
+    overflow-x: auto;
+}
+
+.auth-section .container .down .main-container .table-container table {
+    min-width: 200px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.auth-section .container .down .main-container .table-container th,
+td {
+    border: 1px solid black;
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.auth-section .container .down .main-container .table-container th {
+    background-color: #f2f2f2;
+}
+
+.auth-section .container .down .main-container .table-container table tbody tr td button{
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 5px;
+}
+
+/* Responsive styling */
+@media only screen and (max-width: 768px) {
+
+    .auth-section .container .down .main-container .table-container th,
+    td {
+        padding: 8px;
+    }
+}
+
+/* Beautiful design */
+.auth-section .container .down .main-container .table-container tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.auth-section .container .down .main-container .table-container tbody tr:hover {
+    background-color: #ddd;
+}
+
+@media (max-width: 1100px) {
+    .auth-section .container .down .main-container .main-product-box .auth-product-item {
+        flex: 1 1 calc((100% - 20px) / 2);
+    }
+}
+
+@media (max-width: 500px) {
+    .auth-section .container .down .main-container .main-product-box .auth-product-item {
+        flex: 1 1 100%;
+    }
+}
