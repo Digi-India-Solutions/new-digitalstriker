@@ -4,7 +4,7 @@
  * Uses placeholder images (replace in admin dashboard if needed).
  */
 
-const API = "http://localhost:23000";
+const API = "https://api.digitalstriker.in";
 
 const products = [
   {
