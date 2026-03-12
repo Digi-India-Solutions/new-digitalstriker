@@ -46,10 +46,10 @@ const Footer = () => {
               <MapPin size={20} className="ds-icon" />
               <p>E-148, Mangolpuri, Industrial Area, Phase -2, Pocket E, New Delhi - 110034</p>
             </div>
-            <div className="ds-contact-item">
+            {/* <div className="ds-contact-item">
               <Phone size={20} className="ds-icon" />
               <p>8882494615 / 8447168967</p>
-            </div>
+            </div> */}
             <div className="ds-contact-item">
               <Mail size={20} className="ds-icon" />
               <div className="ds-emails">

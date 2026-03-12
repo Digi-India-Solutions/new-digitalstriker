@@ -50,7 +50,7 @@ function ContactHome() {
                             </div>
                         </div>
 
-                        <div className="ds-info-item">
+                        {/* <div className="ds-info-item">
                             <div className="ds-icon-box">
                                 <Phone size={24} />
                             </div>
@@ -59,7 +59,7 @@ function ContactHome() {
                                 <p>8882494615</p>
                                 <p>8447168967</p>
                             </div>
-                        </div>
+                        </div> */}
 
                         <div className="ds-info-item">
                             <div className="ds-icon-box">
